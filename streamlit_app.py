@@ -7,8 +7,8 @@ import pandas as pd
 st.title('Zena\'s Amazing Athleisure Catalog')
 
 # connect to snowflake
-my_cnx = st.connection("snowflake")
-session = cnx.session()
+#my_cnx = st.connection("snowflake")
+#session = cnx.session()
 
 # run a snowflake query and put it all in a var called my_catalog
 #my_cur.execute("select color_or_style from catalog_for_website")
