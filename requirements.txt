@@ -1,3 +1,6 @@
-# requirements.txt file
+# requirements.txt
 snowflake-connector-python
-cffi==1.15.0
+snowflake-snowpark-python
+streamlit==1.31.1
+requests
+pandas
