@@ -41,7 +41,8 @@ info_dataframe = session.table("catalog_for_website").select(col('color_or_style
 #st.dataframe(data=info_dataframe,use_container_width=True)
 # put the dafta into a dataframe
 pd_df = info_dataframe.to_pandas()
-st.dataframe(pd_df)
+#st.dataframe(pd_df)
+
 txt = pd_df.loc[0,'DIRECT_URL']
 #st.write(txt)
 #st.stop()
@@ -56,7 +57,6 @@ output_format="auto"
 st.write('Price: ', pd_df.loc[0, 'PRICE'])
 st.write('Sizes Available: ', pd_df.loc[0, 'SIZE_LIST'])
 st.write(pd_df.loc[0, 'UPSELL_PRODUCT_DESC'])
-st.write( """Checking if code so far is working.""")
 
 #st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 #streamlit.write('Price: ', df2[1])
