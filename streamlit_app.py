@@ -10,10 +10,10 @@ st.title("Zena\'s Amazing Athleisure Catalog")
 my_cnx = st.connection("snowflake")
 session = my_cnx.session()
 
-st.write( """Checking if code so far is working.""")
-
 # run a snowflake query and put it all in a var called my_catalog
-#my_cur.execute("select color_or_style from catalog_for_website")
+my_cnx.execute("select color_or_style from catalog_for_website")
+
+st.write( """Checking if code so far is working.""")
 #my_catalog = my_cur.fetchall()
 
 # put the dafta into a dataframe
