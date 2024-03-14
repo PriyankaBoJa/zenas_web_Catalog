@@ -11,8 +11,8 @@ my_cnx = st.connection("snowflake")
 session = my_cnx.session()
 
 st.write(
-    """Checking if code so far is working.
-    """)
+    "Checking if code so far is working.
+    ")
 
 # run a snowflake query and put it all in a var called my_catalog
 #my_cur.execute("select color_or_style from catalog_for_website")
