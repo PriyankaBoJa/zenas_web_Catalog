@@ -42,9 +42,8 @@ info_dataframe = session.table("catalog_for_website").select(col('color_or_style
 # put the dafta into a dataframe
 pd_df = info_dataframe.to_pandas()
 st.dataframe(pd_df)
-direct_url=pd_df.loc[0,'direct_url'].iloc(0)
 
-#info_dataframe.select(direct_url).show()
+info_dataframe['direct_url'][0]
 #st.write(direct_url)
 st.stop()
 
