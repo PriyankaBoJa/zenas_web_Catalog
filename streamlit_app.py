@@ -29,10 +29,11 @@ pd_df = my_dataframe.to_pandas()
 
 # Let's put a pick list here so they can pick the color
 option = st.selectbox('Pick a sweatsuit color or style:', my_dataframe)
-st.write( """Checking if code so far is working.""")
 
 # We'll build the image caption now, since we can
-#product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
+product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
+
+st.write( """Checking if code so far is working.""")
 
 # use the option selected to go back and get all the info from the database
 #my_cur.execute("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where
