@@ -38,7 +38,7 @@ product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 #color_or_style = '" + option + "';")
 
 info_dataframe = session.sql("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where color_or_style = '" + option + "';")
-#st.dataframe(info_dataframe)
+info_dataframe.show()
 st.write( """Checking if code so far is working.""")
 
 #df2 = my_cur.fetchone()
