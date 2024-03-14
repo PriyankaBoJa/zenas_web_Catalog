@@ -19,17 +19,17 @@ my_dataframe = session.table("catalog_for_website").select(col('color_or_style')
 
 # put the dafta into a dataframe
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
-st.write( """Checking if code so far is working.""")
 
 # temp write the dataframe to the page so I Can see what I am working with
-# streamlit.write(df)
-# put the first column into a list
-#color_list = df[0].values.tolist()
+# st.dataframe(pd_df)
 
+# put the first column into a list
+#color_list = pd_df[0].values.tolist()
 # print(color_list)
+
 # Let's put a pick list here so they can pick the color
-#option = streamlit.selectbox('Pick a sweatsuit color or style:', list(color_list))
+option = st.selectbox('Pick a sweatsuit color or style:', my_dataframe)
+st.write( """Checking if code so far is working.""")
 
 # We'll build the image caption now, since we can
 #product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
