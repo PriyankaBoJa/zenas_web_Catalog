@@ -18,7 +18,7 @@ my_dataframe = session.table("catalog_for_website").select(col('color_or_style')
 #st.dataframe(data=my_dataframe,use_container_width=True)
 
 # put the dafta into a dataframe
-pd_df = my_dataframe.to_pandas()
+#pd_df = my_dataframe.to_pandas()
 
 # temp write the dataframe to the page so I Can see what I am working with
 # st.dataframe(pd_df)
