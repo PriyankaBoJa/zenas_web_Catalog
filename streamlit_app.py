@@ -17,9 +17,6 @@ session = my_cnx.session()
 my_dataframe = session.table("catalog_for_website").select(col('color_or_style'))
 #st.dataframe(data=my_dataframe,use_container_width=True)
 
-# put the dafta into a dataframe
-pd_df = my_dataframe.to_pandas()
-
 # temp write the dataframe to the page so I Can see what I am working with
 # st.dataframe(pd_df)
 
@@ -42,7 +39,12 @@ product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 info_dataframe = session.table("catalog_for_website").select(col('color_or_style'), col('direct_url'), col('price'), col('size_list'), col('upsell_product_desc')).filter(col('color_or_style')==option)
 
 #st.dataframe(data=info_dataframe,use_container_width=True)
-st.write(info_dataframe[1])
+# put the dafta into a dataframe
+pd_df = info_dataframe.to_pandas()
+
+direct_url=pd_df.loc[pd_df['direct_url']].iloc[0]
+st.write(direct_url)
+st.stop()
 
 #df2 = my_cur.fetchone()
 st.image(
