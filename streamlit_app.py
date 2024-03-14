@@ -40,7 +40,7 @@ product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 #info_dataframe = session.sql("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where color_or_style = '" + option + "';")
 #info_dataframe.show()
 info_dataframe = session.table("catalog_for_website").select(col('color_or_style'), col('direct_url'), col('price'), col('size_list'), col('upsell_product_desc'))
-info_dataframe.filter(col(0) = option)
+info_dataframe.filter(col(0) = option).collect()
 st.write( """Checking if code so far is working.""")
 
 #df2 = my_cur.fetchone()
