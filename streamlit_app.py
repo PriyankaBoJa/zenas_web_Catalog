@@ -18,7 +18,7 @@ my_dataframe = session.table("catalog_for_website").select(col('color_or_style')
 #st.dataframe(data=my_dataframe,use_container_width=True)
 
 # put the dafta into a dataframe
-#pd_df = my_dataframe.to_pandas()
+pd_df = my_dataframe.to_pandas()
 
 # temp write the dataframe to the page so I Can see what I am working with
 # st.dataframe(pd_df)
@@ -36,21 +36,20 @@ product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 # use the option selected to go back and get all the info from the database
 #my_cur.execute("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where
 #color_or_style = '" + option + "';")
-st.write (option)
-st.stop()
+
 #info_dataframe = session.sql("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where color_or_style = '" + option + "';")
 #info_dataframe.show()
 info_dataframe = session.table("catalog_for_website").select(col('color_or_style'), col('direct_url'), col('price'), col('size_list'), col('upsell_product_desc')).filter(col('color_or_style')==option)
-st.write (option)
-st.dataframe(data=info_dataframe,use_container_width=True)
+
+#st.dataframe(data=info_dataframe,use_container_width=True)
 st.write( """Checking if code so far is working.""")
 
 #df2 = my_cur.fetchone()
-#streamlit.image(
-#df2[0],
-#width=400,
-#caption= product_caption
-#)
+st.image(
+info_dataframe[1],
+width=400,
+caption= product_caption
+)
 #streamlit.write('Price: ', df2[1])
 #streamlit.write('Sizes Available: ',df2[2])
 #streamlit.write(df2[3])
