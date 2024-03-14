@@ -42,7 +42,7 @@ product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 info_dataframe = session.table("catalog_for_website").select(col('color_or_style'), col('direct_url'), col('price'), col('size_list'), col('upsell_product_desc')).filter(col('color_or_style')==option)
 
 #st.dataframe(data=info_dataframe,use_container_width=True)
-st.write(infor_dataframe[1])
+st.write(info_dataframe[1])
 
 #df2 = my_cur.fetchone()
 st.image(
