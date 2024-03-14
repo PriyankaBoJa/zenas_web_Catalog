@@ -41,11 +41,11 @@ info_dataframe = session.table("catalog_for_website").select(col('color_or_style
 #st.dataframe(data=info_dataframe,use_container_width=True)
 # put the dafta into a dataframe
 pd_df = info_dataframe.to_pandas()
-
-direct_url=pd_df.loc[1,'direct_url'].iloc(0)
+st.dataframe(pd_df)
+#direct_url=pd_df.loc[1,'direct_url'].iloc(0)
 
 #info_dataframe.select(direct_url).show()
-st.write(direct_url)
+#st.write(direct_url)
 st.stop()
 
 #df2 = my_cur.fetchone()
