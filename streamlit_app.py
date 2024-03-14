@@ -53,7 +53,11 @@ width=400,
 caption= product_caption,
 output_format="auto"
 )
+st.write('Price: ', pd_df.loc[0, 'PRICE'])
+st.write('Sizes Available: ', pd_df.loc[0, 'SIZE_LIST'])
+st.write(pd_df.loc[0, 'UPSELL_PRODUCT_DESC'])
 st.write( """Checking if code so far is working.""")
+
 #st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 #streamlit.write('Price: ', df2[1])
 #streamlit.write('Sizes Available: ',df2[2])
