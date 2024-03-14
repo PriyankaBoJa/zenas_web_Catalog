@@ -1,7 +1,6 @@
 import streamlit as st
 #import snowflake.connector
 from snowflake.snowpark.functions import col
-from snowflake.snowpark.functions import row
 import requests
 import pandas as pd
 
