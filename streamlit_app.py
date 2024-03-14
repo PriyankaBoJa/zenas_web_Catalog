@@ -43,7 +43,7 @@ info_dataframe = session.table("catalog_for_website").select(col('color_or_style
 pd_df = info_dataframe.to_pandas()
 st.dataframe(pd_df)
 
-info_dataframe['direct_url'][0]
+info_dataframe['direct_url'][1]
 #st.write(direct_url)
 st.stop()
 
