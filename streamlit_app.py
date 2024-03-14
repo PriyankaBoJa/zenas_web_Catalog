@@ -48,8 +48,10 @@ st.write( """Checking if code so far is working.""")
 st.image(
 info_dataframe[1],
 width=400,
-caption= product_caption
+caption= product_caption,
+output_format="auto"
 )
+#st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 #streamlit.write('Price: ', df2[1])
 #streamlit.write('Sizes Available: ',df2[2])
 #streamlit.write(df2[3])
