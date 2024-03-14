@@ -4,7 +4,7 @@ from snowflake.snowpark.functions import col
 import requests
 import pandas as pd
 
-st.title('Zena\'s Amazing Athleisure Catalog')
+st.title("Zena\'s Amazing Athleisure Catalog")
 
 # connect to snowflake
 my_cnx = st.connection("snowflake")
