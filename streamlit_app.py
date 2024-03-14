@@ -44,7 +44,7 @@ pd_df = info_dataframe.to_pandas()
 
 #direct_url=pd_df.loc[pd_df['direct_url']].iloc[0]
 
-st.write(info_dataframe.direct_url)
+st.write(info_dataframe.direct_url.show())
 st.stop()
 
 #df2 = my_cur.fetchone()
