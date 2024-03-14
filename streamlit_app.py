@@ -12,14 +12,15 @@ session = my_cnx.session()
 
 # run a snowflake query and put it all in a var called my_catalog
 #my_cnx.execute("select color_or_style from catalog_for_website")
-my_dataframe = session.table("catalog_for_website").select(col('color_or_style'))
-st.dataframe(data=my_dataframe,use_container_width=True)
-
-st.write( """Checking if code so far is working.""")
 #my_catalog = my_cur.fetchall()
 
+my_dataframe = session.table("catalog_for_website").select(col('color_or_style'))
+#st.dataframe(data=my_dataframe,use_container_width=True)
+
 # put the dafta into a dataframe
-#df = pandas.DataFrame(my_catalog)
+df = pandas.DataFrame(st_dataframe)
+st.dataframe(pd_df)
+st.write( """Checking if code so far is working.""")
 
 # temp write the dataframe to the page so I Can see what I am working with
 # streamlit.write(df)
