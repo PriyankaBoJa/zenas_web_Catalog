@@ -43,14 +43,12 @@ info_dataframe = session.table("catalog_for_website").select(col('color_or_style
 pd_df = info_dataframe.to_pandas()
 st.dataframe(pd_df)
 txt = pd_df.loc[0,'DIRECT_URL']
-st.write(txt)
-info_dataframe['direct_url'][1]
-#st.write(direct_url)
-st.stop()
+#st.write(txt)
+#st.stop()
 
 #df2 = my_cur.fetchone()
 st.image(
-info_dataframe[1],
+txt,
 width=400,
 caption= product_caption,
 output_format="auto"
